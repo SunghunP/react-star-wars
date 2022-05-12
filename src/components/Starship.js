@@ -1,14 +1,5 @@
 import styled, { keyframes } from "styled-components";
 
-// const rotate = keyframes`
-//   from {
-//     transform: rotate(0deg);
-//   }
-//   to {
-//     transform: rotate(360deg);
-//   }
-// `;
-
 const StyledDiv = styled.div`
   color: #ffe81f;
   background-color: #000000;
@@ -32,10 +23,12 @@ const StyledDiv = styled.div`
   }
 `;
 
-// animation: ${rotate} 10s linear infinite;
-
 const Starship = ({ starship }) => {
-  return <StyledDiv>{starship.name}</StyledDiv>;
+  return (
+    <div className="card">
+        <StyledDiv className="cardFront" >{starship.name}</StyledDiv>
+    </div>
+  );
 };
 
 export default Starship;
