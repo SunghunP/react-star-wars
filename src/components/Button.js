@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 const StyledButton = styled.button`
-  color: white;
-  background-color: grey;
+  color: #ffe81f;
+  background-color: green;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,17 +10,47 @@ const StyledButton = styled.button`
   height: 100px;
   padding: 10px;
   margin: 20xp;
+  margin-top: 150px;
+  &:disabled {
+    background-color: #D22E2D;
+    color: grey;
+  }
 `;
 
-const Button = (props) => {
-  const handleClick = () => {
-    console.log("hi");
+const StyledDiv = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const Button = ({ starships, setStarships, getStarships }) => {
+  const handleClick = (url) => {
+    if (!!url) {
+      getStarships(url);
+    }
   };
 
+  const checkNull = (str) => {
+    if (!!starships) {
+      return (starships[str] === null) ? true : false
+    } else {
+      return
+    }
+  }
+
   return (
-    <div>
-      <StyledButton onClick={handleClick}>Display More</StyledButton>
-    </div>
+    <StyledDiv>
+      <StyledButton 
+        disabled = {checkNull('previous') ? true : false}
+        onClick={() => handleClick(starships.previous)}>
+        Previous Ships
+      </StyledButton>
+      <StyledButton 
+        disabled = {checkNull('next') ? true : false}
+        onClick={() => handleClick(starships.next)}>
+        More Ships
+      </StyledButton>
+    </StyledDiv>
   );
 };
 
