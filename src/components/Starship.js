@@ -16,10 +16,8 @@ const StyledDiv = styled.div`
   margin: 15px;
 `;
 
-const Starships = ({ starship }) => {
-  return (<StyledDiv>
-    {starship.name}
-  </StyledDiv>)
+const Starship = ({ starship }) => {
+  return <StyledDiv>{starship.name}</StyledDiv>;
 };
 
-export default Starships;
+export default Starship;
