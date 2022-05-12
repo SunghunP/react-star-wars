@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledHeader = styled.header`
-  color: white;
+  color: #ffe81f;
   background-color: #181a18;
   display: flex;
   align-items: center;

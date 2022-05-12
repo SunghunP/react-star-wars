@@ -9,15 +9,10 @@ const StyledTopDiv = styled.div`
   height: inherit;
   padding: 10px;
   margin: 20xp;
-  margin-top: 150px;
   flex-wrap: wrap;
 `;
 
 const StarshipsDisplay = ({ starships }) => {
-  // map the starships object into an array of divs
-
-  // const handleClick = () => {};
-
   return (
     !!starships && (
       <StyledTopDiv className="StarshipsDisplay">

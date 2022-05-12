@@ -10,8 +10,8 @@ import styled, { keyframes } from "styled-components";
 // `;
 
 const StyledDiv = styled.div`
-  color: white;
-  background-color: slategrey;
+  color: #ffe81f;
+  background-color: #000000;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -27,8 +27,8 @@ const StyledDiv = styled.div`
   &:hover {
     transform: scale(1.1, 1.1);
     cursor: pointer;
-    background-color: #b4f8c8;
-    color: black;
+    background-color: #ffe81f;
+    color: #000000;
   }
 `;
 
