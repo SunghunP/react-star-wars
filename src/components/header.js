@@ -2,15 +2,14 @@ import styled from "styled-components";
 
 const StyledHeader = styled.header`
   color: white;
-  background-color: slategrey;
+  background-color: darkgrey;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Barlow", sans-serif;
-  font-family: "Fredoka", sans-serif;
   width: 100%;
-  padding: 10px 0px;
+  padding: 20px 0px;
   margin: 0px 0px 10px 0px; 
+  font-size: 50px;
 `;
 
 const Header = () => {
