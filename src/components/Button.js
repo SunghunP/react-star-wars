@@ -12,7 +12,7 @@ const StyledButton = styled.button`
   margin: 20xp;
   margin-top: 150px;
   &:disabled {
-    background-color: #D22E2D;
+    background-color: #d22e2d;
     color: grey;
   }
 `;
@@ -32,22 +32,24 @@ const Button = ({ starships, setStarships, getStarships }) => {
 
   const checkNull = (str) => {
     if (!!starships) {
-      return (starships[str] === null) ? true : false
+      return starships[str] === null ? true : false;
     } else {
-      return
+      return;
     }
-  }
+  };
 
   return (
     <StyledDiv>
-      <StyledButton 
-        disabled = {checkNull('previous') ? true : false}
-        onClick={() => handleClick(starships.previous)}>
+      <StyledButton
+        disabled={checkNull("previous") ? true : false}
+        onClick={() => handleClick(starships.previous)}
+      >
         Previous Ships
       </StyledButton>
-      <StyledButton 
-        disabled = {checkNull('next') ? true : false}
-        onClick={() => handleClick(starships.next)}>
+      <StyledButton
+        disabled={checkNull("next") ? true : false}
+        onClick={() => handleClick(starships.next)}
+      >
         More Ships
       </StyledButton>
     </StyledDiv>
