@@ -1,4 +1,13 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+// const rotate = keyframes`
+//   from {
+//     transform: rotate(0deg);
+//   }
+//   to {
+//     transform: rotate(360deg);
+//   }
+// `;
 
 const StyledDiv = styled.div`
   color: white;
@@ -14,7 +23,9 @@ const StyledDiv = styled.div`
   border: solid 2px black;
   border-radius: 15px;
   margin: 15px;
+  
 `;
+// animation: ${rotate} 10s linear infinite;
 
 const Starship = ({ starship }) => {
   return <StyledDiv>{starship.name}</StyledDiv>;
