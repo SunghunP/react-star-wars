@@ -1,9 +1,20 @@
-import styled from "styled-components"
+import styled from "styled-components";
+
+const StyledHeader = styled.header`
+  color: white;
+  background-color: slategrey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Barlow", sans-serif;
+  font-family: "Fredoka", sans-serif;
+  width: 100%;
+  padding: 10px 0px;
+  margin: 0px 0px 10px 0px; 
+`;
 
 const Header = () => {
-  const styles @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@700&family=Fredoka&display=swap');
-
-  return <header>STAR WARS STARSHIPS</header>;
+  return <StyledHeader>STAR WARS STARSHIPS</StyledHeader>;
 };
 
 export default Header;

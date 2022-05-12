@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Button from "./components/Button";
+import StarshipDisplay from "./components/StarshipDisplay";
 
 function App() {
   const [starships, setStarships] = useState(null);
@@ -19,13 +20,13 @@ function App() {
   // will run once or if value in array is changed
   useEffect(() => {
     getStarships(`https://swapi.dev/api/starships`);
+    console.log(starships);
   }, []);
-
-  console.log(starships);
 
   return (
     <div className="App">
       <Header />
+      <StarshipDisplay starships={starships} />
       <Button getStarships={getStarships} />
     </div>
   );
