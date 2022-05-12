@@ -11,6 +11,8 @@ const StyledButton = styled.button`
   padding: 10px;
   margin: 20xp;
   margin-top: 150px;
+  margin-right: 10px;
+  margin-left: 10px;
   &:disabled {
     background-color: #d22e2d;
     color: grey;
