@@ -16,6 +16,11 @@ const StyledButton = styled.button`
     background-color: #d22e2d;
     color: grey;
   }
+  @media screen and (width < 500px ) {
+    margin-top: 180px;
+    font-size: 25px;
+    width: 150px;
+  }
 `;
 
 const StyledDiv = styled.div`
