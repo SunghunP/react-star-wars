@@ -20,14 +20,14 @@ function App() {
   // will run once or if value in array is changed
   useEffect(() => {
     getStarships(`https://swapi.dev/api/starships/`);
-    console.log(starships)
+    console.log(starships);
   }, []);
 
   return (
     <div className="App">
       <Header />
-      <StarshipDisplay starships={starships} setStarships={setStarships}/>
-      <Button getStarships={getStarships} />
+      <StarshipDisplay starships={starships} />
+      <Button setStarships={setStarships} getStarships={getStarships} />
     </div>
   );
 }

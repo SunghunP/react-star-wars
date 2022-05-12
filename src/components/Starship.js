@@ -23,7 +23,7 @@ const StyledDiv = styled.div`
   border: solid 2px black;
   border-radius: 15px;
   margin: 15px;
-  transition: all .3s 0s ease-in-out;
+  transition: all 0.3s 0s ease-in-out;
   &:hover {
     transform: scale(1.1, 1.1);
     cursor: pointer;

@@ -9,6 +9,7 @@ const StyledTopDiv = styled.div`
   height: inherit;
   padding: 10px;
   margin: 20xp;
+  margin-top: 150px;
   flex-wrap: wrap;
 `;
 
@@ -21,8 +22,7 @@ const StarshipsDisplay = ({ starships }) => {
     !!starships && (
       <StyledTopDiv className="StarshipsDisplay">
         {starships.results.map((starship) => (
-          <Starship starship={starship}>
-          </Starship>
+          <Starship starship={starship}></Starship>
         ))}
       </StyledTopDiv>
     )

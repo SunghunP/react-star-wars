@@ -6,16 +6,20 @@ const StyledButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 300px;
-  height: 150px;
+  width: 200px;
+  height: 100px;
   padding: 10px;
   margin: 20xp;
 `;
 
 const Button = (props) => {
+  const handleClick = () => {
+    console.log("hi");
+  };
+
   return (
     <div>
-      <StyledButton>Display More</StyledButton>
+      <StyledButton onClick={handleClick}>Display More</StyledButton>
     </div>
   );
 };
