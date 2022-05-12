@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./App.css";
+import Header from "./components/header";
 
 function App() {
   const [starships, setStarships] = useState(null);
@@ -11,7 +12,7 @@ function App() {
     // convert response to js object
     const starshipsResponse = await response.json();
     //update the state to the object of starships
-    setStarships(starshipsResponse.results);
+    setStarships(starshipsResponse);
   };
 
   // will run once or if value in array is changed
@@ -23,7 +24,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Hi</h1>
+      <Header />
+      <button>Display More</button>
     </div>
   );
 }
