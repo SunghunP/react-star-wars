@@ -20,6 +20,7 @@ function App() {
   // will run once or if value in array is changed
   useEffect(() => {
     getStarships(`https://swapi.dev/api/starships`);
+    console.log(starships)
   }, []);
 
   return (
