@@ -1,14 +1,15 @@
 import { useState, useEffect } from "react";
 import "./App.css";
-import Header from "./components/header";
+import Header from "./components/Header";
+import Button from "./components/Button";
 
 function App() {
   const [starships, setStarships] = useState(null);
 
   // function that can be called to fetch all of the data
-  const getStarships = async () => {
+  const getStarships = async (url) => {
     // make api call
-    const response = await fetch(`https://swapi.dev/api/starships`);
+    const response = await fetch(url);
     // convert response to js object
     const starshipsResponse = await response.json();
     //update the state to the object of starships
@@ -17,7 +18,7 @@ function App() {
 
   // will run once or if value in array is changed
   useEffect(() => {
-    getStarships();
+    getStarships(`https://swapi.dev/api/starships`);
   }, []);
 
   console.log(starships);
@@ -25,7 +26,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <button>Display More</button>
+      <Button getStarships={getStarships} />
     </div>
   );
 }
