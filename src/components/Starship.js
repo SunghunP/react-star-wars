@@ -1,6 +1,18 @@
 import styled, { keyframes } from "styled-components";
 import { useState } from "react";
 
+const fadeIn = keyframes`
+  from {
+    transform: scale(0.7);
+    opacity: 0.5;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+`;
+
 const StyledDiv = styled.div`
   color: #ffe81f;
   background-color: #000000;
@@ -16,6 +28,7 @@ const StyledDiv = styled.div`
   border-radius: 15px;
   margin: 15px;
   transition: all 0.3s 0s ease-in-out;
+  animation: ${fadeIn} 0.5s;
   &:hover {
     transform: scale(1.1, 1.1);
     cursor: pointer;
@@ -24,6 +37,7 @@ const StyledDiv = styled.div`
     border: solid 2px grey;
   }
   div {
+    animation: ${fadeIn} 1s;
     font-size: 25px;
   }
 `;
