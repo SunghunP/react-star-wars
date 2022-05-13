@@ -12,6 +12,7 @@ const StyledButton = styled.button`
   margin-top: 150px;
   margin-right: 10px;
   margin-left: 10px;
+  border-radius: 5px;
   &:disabled {
     background-color: #d22e2d;
     color: grey;
