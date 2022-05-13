@@ -14,10 +14,11 @@ const StyledButton = styled.button`
   margin-left: 10px;
   border-radius: 5px;
   border: none;
+  font-size: 30px;
   &:hover {
-    transform: scale(1.1, 1.1);
+    transform: scale(1.01, 1.01);
     cursor: pointer;
-    border: solid 2px grey;
+    border: solid 2px yellow;
   }
   &:disabled {
     background-color: slategrey;

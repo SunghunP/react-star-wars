@@ -10,10 +10,9 @@ const StyledTopDiv = styled.div`
   padding: 10px;
   margin: 20xp;
   flex-wrap: wrap;
-  
 `;
 
-const StarshipsDisplay = ({ starships , allStarships}) => {
+const StarshipsDisplay = ({ starships, allStarships }) => {
   return (
     !!starships && (
       <StyledTopDiv className="StarshipsDisplay">

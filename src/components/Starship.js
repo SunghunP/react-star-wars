@@ -64,7 +64,7 @@ const Starship = ({ starship }) => {
           }}
         >
           <div>Class: {starship.starship_class}</div>
-          <div>Cost: {starship.cost_in_credits}</div> 
+          <div>Cost: {starship.cost_in_credits}</div>
           <div>Hyperdrive rating:{starship.hyperdrive_rating}</div>
         </StyledDiv>
       )}
