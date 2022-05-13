@@ -11,7 +11,7 @@ const StyledDiv = styled.div`
   width: 250px;
   height: 140px;
   padding: 10px;
-  border: solid 2px black;
+  border: solid 2px white;
   border-radius: 15px;
   margin: 15px;
   transition: all 0.3s 0s ease-in-out;
@@ -20,6 +20,7 @@ const StyledDiv = styled.div`
     cursor: pointer;
     background-color: #ffe81f;
     color: #000000;
+    border: solid 2px grey;
   }
 `;
 

@@ -6,6 +6,7 @@ import StarshipDisplay from "./components/StarshipDisplay";
 
 function App() {
   const [starships, setStarships] = useState(null);
+  const [allStarships, setAllStarships] = useState([]);
 
   // function that can be called to fetch all of the data
   const getStarships = async (url) => {
@@ -15,6 +16,7 @@ function App() {
     const starshipsResponse = await response.json();
     //update the state to the object of starships
     setStarships(starshipsResponse);
+    setAllStarships([...allStarships, ...starshipsResponse.results]);
   };
 
   // will run once or if value in array is changed
@@ -30,7 +32,7 @@ function App() {
         setStarships={setStarships}
         getStarships={getStarships}
       />
-      <StarshipDisplay starships={starships} />
+      <StarshipDisplay starships={starships} allStarships={allStarships} />
     </div>
   );
 }
