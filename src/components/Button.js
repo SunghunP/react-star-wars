@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 const StyledButton = styled.button`
-  color: #FFE81F;
-  background-color: #1F36FF;
+  color: #ffe81f;
+  background-color: #1f36ff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,11 +14,16 @@ const StyledButton = styled.button`
   margin-left: 10px;
   border-radius: 5px;
   border: none;
+  &:hover {
+    transform: scale(1.1, 1.1);
+    cursor: pointer;
+    border: solid 2px grey;
+  }
   &:disabled {
     background-color: slategrey;
-    color: #FFE81F;
+    color: #ffe81f;
   }
-  @media screen and (width < 500px ) {
+  @media screen and (width < 500px) {
     margin-top: 180px;
     font-size: 25px;
     width: 150px;
