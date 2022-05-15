@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const fadeIn = keyframes`
   from {
@@ -15,7 +15,7 @@ const fadeIn = keyframes`
 
 const StyledDiv = styled.div`
   color: #ffe81f;
-  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,6 +44,10 @@ const StyledDiv = styled.div`
 
 const Starship = ({ starship }) => {
   const [shown, setShown] = useState(true);
+
+  useEffect(() => {
+    setShown(true);
+  }, [starship]);
 
   return (
     <div className="card">
