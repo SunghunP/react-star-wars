@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const StyledButton = styled.button`
   color: #ffe81f;
-  background-color: #1f36ff;
+  background-color: rgba(128, 128, 128, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,8 +21,9 @@ const StyledButton = styled.button`
     border: solid 2px yellow;
   }
   &:disabled {
-    background-color: slategrey;
-    color: #ffe81f;
+    background-color: rgb(47, 79, 79, 0.5);
+    color: rgba(100, 120, 120, 0.4);
+    cursor: not-allowed;
   }
   @media screen and (width < 500px) {
     margin-top: 180px;
