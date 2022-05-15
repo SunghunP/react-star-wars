@@ -24,6 +24,10 @@ const StyledButton = styled.button`
     background-color: rgb(47, 79, 79, 0.5);
     color: rgba(100, 120, 120, 0.4);
     cursor: not-allowed;
+    &:hover {
+      border: none;
+      transform: none;
+    }
   }
   @media screen and (width < 500px) {
     margin-top: 180px;
