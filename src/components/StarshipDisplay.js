@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Starship from "./Starship";
 
-const StyledTopDiv = styled.div`
+const StyledDiv = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,11 +15,11 @@ const StyledTopDiv = styled.div`
 const StarshipsDisplay = ({ starships, allStarships }) => {
   return (
     !!starships && (
-      <StyledTopDiv className="StarshipsDisplay">
+      <StyledDiv className="StarshipsDisplay">
         {starships.results.map((starship) => (
           <Starship starship={starship}></Starship>
         ))}
-      </StyledTopDiv>
+      </StyledDiv>
     )
   );
 };
